@@ -3,14 +3,12 @@ void setup() {
     size(600,600);
     smooth();
     frameRate(120);
-    append(car, new Car());
+    car = new Car();
+    car.start(150,-50);
 }    
 
 void draw() {
     background(123);
-    for (int i = 0; i < car.length; i++) {
-        car[i].draw();
-        car[i].drive();
-    }
-
+    car.draw();
+    car.drive();
 }
