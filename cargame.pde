@@ -1,14 +1,16 @@
-Car car;
+Car car[];
 void setup() {
     size(600,600);
     smooth();
     frameRate(120);
-    car = new Car();
-    car.start();
+    append(car, new Car());
 }    
 
 void draw() {
     background(123);
-    car.draw();
-    car.drive();
+    for (int i = 0; i < car.length; i++) {
+        car[i].draw();
+        car[i].drive();
+    }
+
 }
